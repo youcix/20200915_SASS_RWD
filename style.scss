@@ -19,8 +19,12 @@ $color-sub:#5B5B5B;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding:30px 0;
+    padding:30px 100px;
     box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
+    align-items:center;
+    position:fixed;
+    width:100%;
+    background: white;
 
     .logo{
         font-family: 'Ubuntu', sans-serif;
@@ -32,12 +36,27 @@ $color-sub:#5B5B5B;
         }
     }
 
+    .link {
+        text-align: center;
+        a{
+            text-decoration:none ;
+            transition:0.5s;
+            padding: 30px;
+
+            &:hover {
+                color:$color-sub;
+        }
+
+    }
+}
     .social{
 
         img{
 
             filter: invert(13%) sepia(26%) saturate(13%) hue-rotate(314deg) brightness(88%) contrast(91%);
             transition:0.6s;
+            width:30px;
+            margin:5px;
             
 
             &:hover {
