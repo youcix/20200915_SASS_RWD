@@ -1,10 +1,49 @@
-<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
-h1{
-    color:gray;
-    text-align: center;
-    font-weight:200;
-    letter-spacing: 20px;
-    font-family: 'Abel', sans-serif;
+//主色及次要色 
+$color-main:#272727;
+$color-sub:#5B5B5B;
 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+    color:$color-main;
+}
+
+// 導覽列
+#navigation{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding:30px 0;
+    box-shadow: 0px 5px 7px rgba(0,0,0,0.1);
+
+    .logo{
+        font-family: 'Ubuntu', sans-serif;
+        text-decoration:none ;
+        font-size:32px;
+
+        &:hover {
+            color:$color-sub;
+        }
+    }
+
+    .social{
+
+        img{
+
+            filter: invert(13%) sepia(26%) saturate(13%) hue-rotate(314deg) brightness(88%) contrast(91%);
+            transition:0.6s;
+            
+
+            &:hover {
+                filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
+            }
+        }
+    }
+   
 }

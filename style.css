@@ -1,7 +1,43 @@
-h1 {
-  color: gray;
-  text-align: center;
-  font-weight: 200;
-  letter-spacing: 20px;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+  color: #272727;
+}
+
+#navigation {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding: 30px 0;
+  -webkit-box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.1);
+}
+
+#navigation .logo {
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+#navigation .logo:hover {
+  color: #5B5B5B;
+}
+
+#navigation .social img {
+  -webkit-filter: invert(13%) sepia(26%) saturate(13%) hue-rotate(314deg) brightness(88%) contrast(91%);
+          filter: invert(13%) sepia(26%) saturate(13%) hue-rotate(314deg) brightness(88%) contrast(91%);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+#navigation .social img:hover {
+  -webkit-filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
+          filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
 }
 /*# sourceMappingURL=style.css.map */
