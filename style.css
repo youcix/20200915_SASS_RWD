@@ -25,9 +25,21 @@
   background: white;
 }
 
+@media screen and (min-width: 1025px) {
+  #navigation {
+        grid-template-areas: " logo link social";
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #navigation {
         grid-template-areas: "logo social menu";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #navigation {
+    padding: 10px 20px;
   }
 }
 
@@ -48,6 +60,12 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  #navigation #menu {
+    width: 32px;
+  }
+}
+
 #navigation .logo {
   font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
@@ -55,11 +73,18 @@
   grid-area: logo;
 }
 
+@media screen and (max-width: 767px) {
+  #navigation .logo {
+    font-size: 18px;
+  }
+}
+
 #navigation .logo:hover {
   color: #5B5B5B;
 }
 
 #navigation .link {
+  grid-area: link;
   text-align: center;
 }
 
@@ -94,6 +119,13 @@
   margin-left: 15px;
 }
 
+@media screen and (max-width: 767px) {
+  #navigation .social img {
+    width: 20px;
+    margin-left: 10px;
+  }
+}
+
 #navigation .social img:hover {
   -webkit-filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
           filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
@@ -117,6 +149,14 @@
   padding-left: 30px;
   margin-top: 50px;
   font-family: 'Ubuntu', sans-serif;
+}
+
+@media screen and (max-width: 767px) {
+  #about h2 {
+    font-size: 50px;
+    letter-spacing: 10px;
+    padding-left: 10px;
+  }
 }
 
 #about p {
@@ -208,6 +248,7 @@ footer .logo {
   text-decoration: none;
   font-size: 32px;
   grid-area: logo;
+  color: #fff;
 }
 
 footer .logo:hover {
@@ -223,6 +264,7 @@ footer .link a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 30px;
+  color: #fff;
 }
 
 footer .link a:hover {

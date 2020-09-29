@@ -35,8 +35,19 @@ $mobil:767px;
     width:100%;
     background: white;
 
+    // 桌電
+    @media screen and (min-width:$desktop){
+        grid-template-areas:" logo link social";
+    }
+
+
+    // 平板
     @media screen and (max-width:$table){
         grid-template-areas:"logo social menu";
+    }
+    // 手機
+    @media screen and (max-width:$mobil){
+        padding: 10px 20px;
     }
 
     // 選單
@@ -53,7 +64,9 @@ $mobil:767px;
             display:none;
         }
             
-        
+        @media screen and (max-width:$mobil){
+            width: 32px;
+        }
         
     }
 
@@ -63,12 +76,17 @@ $mobil:767px;
         font-size:32px;
         grid-area: logo;
 
+        @media screen and (max-width:$mobil){
+            font-size: 18px;
+        }
+
         &:hover {
             color:$color-sub;
         }
     }
 
     .link {
+        grid-area: link;
         text-align: center;
         a{
             text-decoration:none ;
@@ -99,7 +117,10 @@ $mobil:767px;
             width:30px;
             margin-left:15px;
             
-            
+            @media screen and (max-width:$mobil){
+                width: 20px;
+                margin-left:10px;
+            }
 
             &:hover {
                 filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
@@ -122,12 +143,20 @@ $mobil:767px;
     height:100vh;
     text-align:center;
 
+   
+    
+
     h2{
         font-size: 200px;
         letter-spacing:30px;
         padding-left: 30px;
         margin-top: 50px;
         font-family: 'Ubuntu', sans-serif;
+        @media screen and (max-width:$mobil){
+            font-size: 50px;
+            letter-spacing: 10px;
+            padding-left: 10px;
+        }
     }
     p{
         margin: 50px;
@@ -223,6 +252,7 @@ footer{
         text-decoration:none ;
         font-size:32px;
         grid-area: logo;
+        color:#fff;
 
         &:hover {
             color:$color-sub;
@@ -234,8 +264,8 @@ footer{
         a{
             text-decoration:none ;
             transition:0.5s;
-            padding: 30px;
-
+            padding:30px;
+            color:#fff;
             &:hover {
                 color:$color-sub;
             }
