@@ -26,8 +26,19 @@
 }
 
 @media screen and (max-width: 1024px) {
+  #navigation {
+        grid-template-areas: "logo social menu";
+  }
+}
+
+#navigation #menu {
+  grid-area: menu;
+}
+
+@media screen and (max-width: 1024px) {
   #navigation #menu {
     display: block;
+    margin-left: auto;
   }
 }
 
@@ -41,6 +52,7 @@
   font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
   font-size: 32px;
+  grid-area: logo;
 }
 
 #navigation .logo:hover {
@@ -70,6 +82,7 @@
 
 #navigation .social {
   margin: auto;
+  grid-area: social;
 }
 
 #navigation .social img {
@@ -149,6 +162,15 @@
   grid-gap: 15px 30px;
 }
 
+@media screen and (max-width: 1024px) {
+  #work #work-box {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 5px 40px;
+  }
+}
+
 #work #work-box .work-box-small img {
   display: block;
   width: 100%;
@@ -173,5 +195,56 @@
 .button-div {
   text-align: center;
   margin-top: 50px;
+}
+
+footer {
+  background: #272727;
+  padding: 90px 0;
+  text-align: center;
+}
+
+footer .logo {
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  font-size: 32px;
+  grid-area: logo;
+}
+
+footer .logo:hover {
+  color: #5B5B5B;
+}
+
+footer .link {
+  text-align: center;
+}
+
+footer .link a {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 30px;
+}
+
+footer .link a:hover {
+  color: #5B5B5B;
+}
+
+footer .social {
+  margin: auto;
+  grid-area: social;
+}
+
+footer .social img {
+  -webkit-filter: invert(100%) sepia(65%) saturate(216%) hue-rotate(243deg) brightness(110%) contrast(100%);
+          filter: invert(100%) sepia(65%) saturate(216%) hue-rotate(243deg) brightness(110%) contrast(100%);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  width: 30px;
+  margin-left: 15px;
+}
+
+footer .social img:hover {
+  -webkit-filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
+          filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
 }
 /*# sourceMappingURL=style.css.map */

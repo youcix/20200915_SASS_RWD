@@ -35,12 +35,20 @@ $mobil:767px;
     width:100%;
     background: white;
 
+    @media screen and (max-width:$table){
+        grid-template-areas:"logo social menu";
+    }
+
+    // 選單
     #menu{
+        grid-area: menu;
         
+        // 平板: 顯示
         @media screen and (max-width:$table) {
             display:block;
+            margin-left: auto;
         }
-        
+        // 桌電：隱藏
         @media screen and (min-width:$desktop) {
             display:none;
         }
@@ -53,6 +61,7 @@ $mobil:767px;
         font-family: 'Ubuntu', sans-serif;
         text-decoration:none ;
         font-size:32px;
+        grid-area: logo;
 
         &:hover {
             color:$color-sub;
@@ -81,6 +90,7 @@ $mobil:767px;
 }
     .social{
         margin:auto;
+        grid-area: social;
 
         img{
 
@@ -162,6 +172,13 @@ $mobil:767px;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(2,340px);
         grid-gap: 15px 30px;
+
+        // 平板
+        @media screen and (max-width:$table) {
+            grid-template-columns: repeat(2,1fr);
+            width:100%;
+            padding:5px 40px;
+        }
         
         .work-box-small{
 
@@ -196,3 +213,50 @@ $mobil:767px;
 
 // 頁尾
 
+footer{
+    background: $color-main;
+    padding:90px 0;
+    text-align:center;
+
+    .logo{
+        font-family: 'Ubuntu', sans-serif;
+        text-decoration:none ;
+        font-size:32px;
+        grid-area: logo;
+
+        &:hover {
+            color:$color-sub;
+        }
+    }
+
+    .link {
+        text-align: center;
+        a{
+            text-decoration:none ;
+            transition:0.5s;
+            padding: 30px;
+
+            &:hover {
+                color:$color-sub;
+            }
+        }
+    }
+    .social{
+        margin:auto;
+        grid-area: social;
+
+        img{
+
+            filter: invert(100%) sepia(65%) saturate(216%) hue-rotate(243deg) brightness(110%) contrast(100%);
+            transition:0.6s;
+            width:30px;
+            margin-left:15px;
+            
+            
+
+            &:hover {
+                filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
+            }
+        }
+    }
+}
