@@ -34,6 +34,7 @@ $mobil:767px;
     position:fixed;
     width:100%;
     background: white;
+    z-index: 1;
 
     // 桌電
     @media screen and (min-width:$desktop){
@@ -237,7 +238,7 @@ $mobil:767px;
 // 按鈕外區塊
 .button-div{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 // 頁尾
@@ -246,6 +247,7 @@ footer{
     background: $color-main;
     padding:90px 0;
     text-align:center;
+    margin-top: 120px;
 
     .logo{
         font-family: 'Ubuntu', sans-serif;
@@ -274,6 +276,7 @@ footer{
     .social{
         margin:auto;
         grid-area: social;
+        padding: 20px;
 
         img{
 
@@ -288,5 +291,10 @@ footer{
                 filter: invert(29%) sepia(0%) saturate(1039%) hue-rotate(135deg) brightness(100%) contrast(90%);
             }
         }
+    }
+    #copyright{
+        color:white;
+        font-size: 8pt;
+        margin-top: 50px;
     }
 }
